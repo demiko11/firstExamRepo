@@ -1,0 +1,136 @@
+public class Exams1 {
+    public static void main(String[] args) {
+
+        sayHallo("Davit");
+
+
+        int result = sum (77, 70);
+            System.out.println("ორი მთელი რიცხვის დაბრუნებული შედეგი: " + result);
+
+
+
+        boolean number = isEven (8);
+            if (number == true){
+                System.out.println("შენი რიცხვი ლუწია: " + number);
+            }
+            else {
+                System.out.println("შენი რიცხვი კენტია: " + number);
+            }
+
+
+        castToInt(7.7);
+
+
+
+        int answer = nums(83, 71);
+            System.out.println("უფრო დიდი რიცხვია: " + answer);
+
+
+
+        String textLength = "საქართველო";
+        int size = wordLength(textLength);
+        System.out.println("ტექსტის სიგრძე არის: " + size);
+
+
+
+
+
+        int total = quantiti(10,20);
+        System.out.println(total);
+
+        total =quantiti(10, 15, 25);
+        System.out.println(total);
+
+
+
+
+    }
+
+//ამოცანა 1: მეთოდი, რომელიც ბეჭდავს მისალმებას მომხმარებლის სახელზე
+//მეთოდი იღებს String name ტიპის პარამეტრს და ბეჭდავს მისალმებას. არ აბრუნებს მნიშვნელობას.
+
+
+    public static void sayHallo(String name){
+        System.out.println("Hello " + name);
+    }
+
+
+//ამოცანა 2: დაწერეთ მეთოდი, რომელიც აბრუნებს ორი მთელი რიცხვის ჯამს
+//(მეთოდი იღებს ორ `int` ტიპის რიცხვს, აბრუნებს მათ ჯამს და ტიპი არის `int`.)
+
+
+    public static int sum(int a, int b){
+        return a + b;
+    }
+
+
+
+// ამოცანა 3: დაწერეთ მეთოდი, რომელიც ამოწმებს არის თუ არა
+// რიცხვი ლუწი (მეთოდი აბრუნებს `boolean` ტიპს. )
+
+
+    public static boolean isEven ( int number){
+        if (number % 2 == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+
+
+//    ამოცანა 4:დაწერეთ მეთოდი, რომელიც იღებს double
+//    რიცხვს და აბრუნებს მას მთელ რიცხვად (Casting გამოყენებით)
+
+
+    public static void castToInt  (double num ){
+        int inputnum = (int) num;
+        System.out.println("Casting რიცხვი არის: " + inputnum);
+
+    }
+
+
+
+//ამოცანა 5: დაწერეთ მეთოდი, რომელიც აბრუნებს ორ რიცხვს შორის უფრო დიდს
+//(მეთოდი იღებს ორ `int` რიცხვს და აბრუნებს მათ შორის დიდ რიცხვს
+//if/else` ლოგიკის გამოყენებით.)
+
+    public static int nums(int a, int b){
+        if(a > b){
+            return a;
+        }
+        else {
+            return b;
+        }
+    }
+
+
+
+//ამოცანა 6:დაწერეთ მეთოდი, რომელიც აბრუნებს String-ის სიგრძეს
+//( მეთოდი იღებს `String` ტიპს და აბრუნებს მასში სიმბოლოების რაოდენობას)
+
+
+
+   public static int wordLength(String text){
+            return text.length();
+
+   }
+
+
+
+//ამოცანა 7: დაწერეთ მეთოდის გადატვირთვა (Overloading) — multiply
+//(ერთი ვერსია იღებს 2 რიცხვს და აბრუნებს ნამრავლს. - მეორე ვერსია იღებს 3 რიცხვს.)
+
+
+    public static int quantiti (int a, int b){
+        return a * b;
+    }
+
+    public static int quantiti (int a, int b, int c){
+        return a * b * c;
+    }
+
+
+
+}
